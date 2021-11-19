@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #542a52;
+}
+
+#formContainer{
+    border: 2px solid #542a52;
+    padding: 15px;
+    padding-bottom: 5px;
+    margin: auto;
+    width: 80%;
+    margin-top: 5px;
+}
+
+#headerTitle{
+    background-color: #542a52;
+    color: #fff;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 10px 5px 5px 10px;
+    margin-bottom: 10px;
+}
+
+label{
+    font-weight: bold;
+}
+
+input, select{
+    margin-top: 2px;
+    margin-bottom: 15px;
+
+    padding-top: 2px;
+    padding-left: 5px;
+    border: 1px solid #542a52;
+    color: #000;
+}
+
+.asterisk-style{
+    color: red;
+}
+
+.names{
+    margin-bottom: 8px;
+}
+.nameDiv input{
+    width: 250%;
+
+}
+
+.nameDiv select{
+    width: 112%;
+}
+
+#photoBox{
+    width: 150px;
+    height: 150px;
+    border: 1px solid #542a52;
+    background-color: #f2f2f2;
+    margin-bottom: 4px;
+    float: right;
+}
+
+.photoButton button{
+    width: 150px;
+    border: 1px solid #542a52;
+    float: right;
+}
+
+input[placeholder]{
+    color: grey;
+    font-style: italic;
+}
+
+
+/* Second phase */
+.genderBox{
+    border: 1px solid #542a52;
+    width: 123%;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+.genderBox input{
+    padding: 0px;
+    margin: 0px;
+    font-weight: none;
+}
+
+.tabSpacing{
+    margin-right: 150px;
+}
+
+.tabSpacing1{
+    margin-right: 240px;
+}
+
+#dob{
+    width: 180%;
+}
+
+#country{
+    width: 100%;
+    height: 28px;
+
+}
+
+.dobCountry{
+    /* margin-bottom: 15px; */
+}
+
+#residence, #nationality{
+    width: 341%;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.hr{
+    border: 1px solid #542a52;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#register{
+    float: right;
+    width: 33%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #542a52;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 700px){
+    #formContainer{
+        width: 100%;
+        margin-left: 50px;
+    }
+}

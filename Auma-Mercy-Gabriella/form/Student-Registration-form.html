@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- style sheets -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/Student-Registration-form.css">
+    <title>Student Registration Form</title>
+  </head>
+  <body>
+
+    <div class="container" id="formContainer">
+      <div class="row">
+        <div class="col-12">
+          <!-- Form starts from here-->
+          <form autocomplete="off" action="/register" id="form" method="post">
+            <!-- Form header-->
+            <div class="col-12" >
+              <h2 id="headerTitle">Student Registration Form</h2>
+            </div>
+
+            <!-- Names, title and Photo div -->
+            <div class="row names">
+              <!-- Names and title div -->
+              <div class="col-8 nameDiv">
+                <!-- Sur name -->
+                <label for="surName">
+                  Sur name <span class="asterisk-style">*</span>
+                  <br />
+                  <input type="text" name="SurName" id="surName" placeholder="Enter Surname" onfocusout="validateFirstName()"/>
+                </label>
+                <span class="helper-text"></span>
+                <br />
+
+                <!-- Given name -->
+                <label for="givenName">
+                  Given name <span class="asterisk-style">*</span>
+                  <br />
+                  <input type="text" name="GivenName" id="givenName" placeholder="Enter Given Name" onfocusout="validateLastName()"/>
+                </label>
+                <br />
+
+                <!-- Title -->
+                <label for="title">
+                  Title <span class="asterisk-style">*</span>
+                  <br />
+                </label>
+                <br />
+
+                <select name="title" id="title">
+                  <option value="" selected>--Select Title--</option>
+                  <option value="mr">Mr</option>
+                  <option value="mrs">Mrs</option>
+                  <option value="miss">Miss</option>
+                </select>
+              </div>
+
+              <!-- Photo div -->
+              <div class="col-4 photoButton">
+                <div id="photoBox"></div>
+                <button>Upload Photo</button>
+              </div>
+            </div>
+
+            <!-- Gender div-->
+            <div class="row">
+              <div class="col-12">
+                <label for="gender">
+                  Gender <span class="asterisk-style">*</span>
+                  <br />
+
+                  <div class="genderBox" onfocusout="validategenderName()">
+                    <input type="radio" name="gender" id="male"/> Male
+
+                    <span class="tabSpacing"></span>
+
+                    <input type="radio" name="gender" id="female" /> Female
+                    <span class="tabSpacing1"></span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- DOB and Country div -->
+            <div class="row dobCountry">
+              <div class="col-6">
+                <label for="dob">
+                  Date of Birth <span class="asterisk-style">*</span>
+                  <br />
+
+                  <input type="date" name="dateOfBirth" id="dob" placeholder="DD/MM/YEAR" onfocusout="validateDoB()" />
+                </label>
+              </div>
+
+              <!-- Country div -->
+              <div class="col-6">
+                <label for="country">
+                  Country <span class="asterisk-style">*</span>
+                </label>
+                <br />
+
+                <select name="country" id="country">
+                  <option value="default" selected>-- Select Country --</option>
+                  <option value="uganda">Uganda</option>
+                  <option value="kenya">Kenya</option>
+                  <option value="burundi">Burundi</option>
+                  <option value="rwanda">Rwanda</option>
+                  <option value="tanzania">Tanzania</option>
+                  <option value="ssudan">South Sudan</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Place of residence -->
+            <div class="row">
+                <div class="col-12">
+                    <label for="residence">
+                        Place of Residence <span class="asterisk-style">*</span>
+
+                        <br>
+                        <input type="text" name="residence" id="residence" placeholder="Enter Place of Residence" onfocusout="validateResidence()">
+                    </label>
+                </div>
+            </div>
+
+            <!-- Nationality -->
+            <div class="row">
+                <div class="col-12">
+                    <label for="nationality">
+                        Nationality <span class="asterisk-style">*</span>
+
+                        <br>
+                        <input type="text" name="nationality" id="nationality" placeholder="Enter your Nationality here" onfocusout="validateCountry()">
+                    </label>
+                </div>
+            </div>
+
+            <!-- horizontal line -->
+            <hr class="hr">
+
+            <!-- Register button -->
+            <input type="submit" value="Register" id="register"> 
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="/Student-Registration-form.js"></script>
+  </body>
+</html>
