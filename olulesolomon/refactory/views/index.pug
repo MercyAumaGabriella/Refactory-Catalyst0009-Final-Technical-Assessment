@@ -7,9 +7,9 @@ head
   title Refactory assessment
 .row.p-5.m-5
   .col-sm
-    .border.container
+    .container(style=' border: 1.5px solid indigo; width: 50%')
       .row
-        .col-12.mt-0.mb-0
+        .col-12.mt-2.mb-0
             h3.text-center.text-lead#success-message(style='background-color: green;')
         .col-12.mt-0(style='background-color: indigo;')
           h3.text-center.text-lead(style='color: aliceblue; font-size: large;')
@@ -21,19 +21,19 @@ head
             .form-group.mb-3
               label(for='surname' name='surname') Sur name 
                 span(style='color: red;') *
-              input.form-control(type='text' name='surname' placeholder='Enter surname')
+              input.form-control(type='text' name='surname' placeholder='Enter surname' style='border: 1.5px solid indigo;')
               small#surname-error(style='color: red;')
             // givenname
             .form-group.mb-3
               label(for='givenname' name='givenname') Given name
                 span(style='color: red;') *
-              input.form-control(type='text' name='givenname' placeholder='Enter given name')
+              input.form-control(type='text' name='givenname' placeholder='Enter given name' style='border: 1.5px solid indigo;')
               small#givenname-error(style='color: red;')
             // title
             .form-group.mb-3
               label(for='title' name='title') Title
                 span(style='color: red;') *
-              select#title.form-control(name='title')
+              select#title.form-control(name='title' style='border: 1.5px solid indigo;')
                 option(value='')
                 option(value='Mr') Mr
                 option(value='Mrs') Mrs
@@ -44,17 +44,17 @@ head
               small#title-error(style='color: red;')
           .col-4.mt-4
             .row
-                .col-12.form-control.mb-2(style='height: 150px;') 
+                .col-12.form-control.mb-2(style='height: 150px; border: 1.5px solid indigo;') 
         
             .col-12
               
               input#uploadphoto(type='file' name='uploadphoto' hidden)
-              label#uploadphoto.text-light.d-flex.justify-content-center(for="uploadphoto" style='background-color: indigo; text: white;padding: 0.2rem;font-family: sans-serif;border-radius: 0.3rem;cursor: pointer; margin-top: 0.5rem;' ) Upload photo
+              label#uploadphoto.text-light.d-flex.justify-content-center.text-dark(for="uploadphoto" name= 'uploadphoto' style='background-color: white; text: indigo;padding: 0.2rem;font-family: sans-serif;border-radius: 0.3rem; border: 1.5px solid indigo; outline: indigo; cursor: pointer; margin-top: 0.5rem;' ) Upload photo
         .col-md-12
             label.form-label(for='inputEmail4') Gender
                 span(style='color: red;') *
             br
-            #gender-box.form-control
+            #gender-box.form-control(style='border: 1.5px solid indigo;')
                 .form-check.form-check-inline.d-flex.justify-content-left
                     .form-check.form-check-inline.col-4
                         input#inlineRadio1.form-check-input(type='radio' name='gender' value='Male')
@@ -67,12 +67,12 @@ head
           .col-6.input-div-left
             label.DOB Date of Birth
                 span(style='color: red;') *
-            input.form-control(type='date' max='2019-12-31' name='dob')
+            input.form-control(type='date' max='2019-12-31' name='dob' style='border: 1.5px solid indigo;')
             small#DOB-error(style='color: red;')
           .col-6.input-div-right
             label.Country Place of country
                 span(style='color: red;') *
-            select.form-control(name='country' id='')
+            select.form-control(name='country' id='' style='border: 1.5px solid indigo;' placeholder ='Select your country')
               option(value='')
               option(value='Kenya') Kenya
               option(value='Rwanda') Rwanda
@@ -84,13 +84,13 @@ head
           .form-group.col-12
             label(for='residence') Place of Residence
                 span(style='color: red;') *
-            input.residence.form-control(type='text' name='residence')
+            input.residence.form-control(type='text' name='residence' style='border: 1.5px solid indigo;' placeholder='Enter place of residence')
             small#residence-error(style='color: red;')
         .row.mb-3
           .form-group.col-12
             label(for='nationality') Nationality
                 span(style='color: red;') *
-            input.nationality.form-control(type='nationality' name='nationality' class='placeholder="Enter nationality"')
+            input.nationality.form-control(type='nationality' name='nationality' class='placeholder="Enter nationality" ' style='border: 1.5px solid indigo;' placeholder='Enter your Nationality')
             small#nationality-error(style='color: red;')
         .row.mb-3
             .border-top.mb-2.col-12
