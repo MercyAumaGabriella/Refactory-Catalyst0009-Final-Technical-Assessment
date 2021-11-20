@@ -20,16 +20,19 @@ head
           .col-8
             .form-group.mb-3
               label(for='surname' name='surname') Sur name 
+                span(style='color: red;') *
               input.form-control(type='text' name='surname' placeholder='Enter surname')
               small#surname-error(style='color: red;')
             // givenname
             .form-group.mb-3
               label(for='givenname' name='givenname') Given name
+                span(style='color: red;') *
               input.form-control(type='text' name='givenname' placeholder='Enter given name')
               small#givenname-error(style='color: red;')
             // title
             .form-group.mb-3
               label(for='title' name='title') Title
+                span(style='color: red;') *
               select#title.form-control(name='title')
                 option(value='')
                 option(value='Mr') Mr
@@ -49,6 +52,7 @@ head
               label#uploadphoto.text-light.d-flex.justify-content-center(for="uploadphoto" style='background-color: indigo; text: white;padding: 0.2rem;font-family: sans-serif;border-radius: 0.3rem;cursor: pointer; margin-top: 0.5rem;' ) Upload photo
         .col-md-12
             label.form-label(for='inputEmail4') Gender
+                span(style='color: red;') *
             br
             #gender-box.form-control
                 .form-check.form-check-inline.d-flex.justify-content-left
@@ -62,10 +66,12 @@ head
         .row.mb-3
           .col-6.input-div-left
             label.DOB Date of Birth
+                span(style='color: red;') *
             input.form-control(type='date' max='2019-12-31' name='dob')
             small#DOB-error(style='color: red;')
           .col-6.input-div-right
             label.Country Place of country
+                span(style='color: red;') *
             select.form-control(name='country' id='')
               option(value='')
               option(value='Kenya') Kenya
@@ -77,17 +83,19 @@ head
         .row.mb-3
           .form-group.col-12
             label(for='residence') Place of Residence
+                span(style='color: red;') *
             input.residence.form-control(type='text' name='residence')
             small#residence-error(style='color: red;')
         .row.mb-3
           .form-group.col-12
             label(for='nationality') Nationality
-            input.nationality.form-control.mb-5(type='nationality' name='nationality' class='placeholder="Enter nationality"')
+                span(style='color: red;') *
+            input.nationality.form-control(type='nationality' name='nationality' class='placeholder="Enter nationality"')
             small#nationality-error(style='color: red;')
         .row.mb-3
             .border-top.mb-2.col-12
             .col-12.d-flex.justify-content-end
-                button.btn(type='submit', style='margin-left:10px; background: #7612f8; padding: 8px 25px; margin-left: 30px; border-radius: 4px; font-weight: 400; color: #fff;') Submit
+                button.btn(type='submit', style='margin-left:10px; background: indigo; padding: 8px 25px; margin-left: 30px; border-radius: 4px; font-weight: 400; color: #fff;') Submit
 script(src='/javascript/app.js')
 script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js' integrity='sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p' crossorigin='anonymous')
 script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js' integrity='sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF' crossorigin='anonymous')
