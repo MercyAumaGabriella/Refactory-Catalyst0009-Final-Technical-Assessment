@@ -20,6 +20,8 @@ const validate = (event) => {
   const titleError = document.getElementById("title-error");
   const countryError = document.getElementById("country-error");
 
+  //regexes 
+  const nonumber = /^[A-Za-z]+$/;
   let valid = false;
   const surName = surname.value.trim();
   if (surName == "") {
@@ -176,7 +178,7 @@ const validate = (event) => {
   const studentCountry = country.value.trim();
   if (studentCountry == "") {
     country.style.border = "2px solid red";
-    countryError = "You must select your country of residense!";
+    countryError.innerHTML = "You must select your country of residense!";
     country.focus();
     valid = false;
   } else {
@@ -185,10 +187,10 @@ const validate = (event) => {
       "background-color:#0bda51 ; color:#fff; font-weight:500;";
     successMessage.style.border = "1px solid #0bda51";
   }
-  const studentPhoto = uploadphoto.value.trim();
-  if (studentPhoto == "") {
+  
+  if (uploadphoto.value == "") {
     uploadphoto.style.border = "2px solid red";
-    uploadphotoError = "You must upload a photo!";
+    
     uploadphoto.focus();
     valid = false;
   } else {

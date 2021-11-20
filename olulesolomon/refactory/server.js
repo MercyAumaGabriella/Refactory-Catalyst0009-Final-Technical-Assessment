@@ -39,7 +39,7 @@ const studentregistration = require('./routes/student');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname + '/public')));
-app.use('/public/imagefiles', express.static(__dirname + '/public/imgs'));
+app.use('/public/imgs', express.static(__dirname + '/public/imgs'));
   
   
 // Routes for the project.
