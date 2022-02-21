@@ -1,0 +1,35 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Build and Test
+
+#When events will be triggered
+on:
+  push:
+    branches: [ main ]
+
+#what to do
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: "Checkout"
+      uses: actions/checkout@main
+      
+    - name: "Setup Node.js"
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+        
+    - name: Install Dependencies
+      run: npm install 
+      
+    - name: Authenticate to Google Cloud
+      uses: google-github-actions/auth@v0.4.3
+      with:
+        creds: ${{ secrets.}}
+        
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
