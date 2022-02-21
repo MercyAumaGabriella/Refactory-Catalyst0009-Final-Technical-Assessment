@@ -22,14 +22,19 @@ jobs:
       with:
         node-version: 12.x
         
-    - name: Install Dependencies
+    - name: "Install Dependencies"
       run: npm install 
       
-    - name: Authenticate to Google Cloud
+    - name: "Authenticate to Google Cloud"
       uses: google-github-actions/auth@v0.4.3
       with:
-        creds: ${{ secrets.}}
-        
+        creds: ${{ secrets.GOOGLE_CREDENTIALS}}
+    
+    - name: "Cloud Functions Deploy"
+      uses: google-github-actions/deploy-cloud-functions@v0.7.2
+      with:
+         app-name: StudentRegistry
+      
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
